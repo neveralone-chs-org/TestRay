@@ -38,10 +38,10 @@ employee_health_home_page:
   dropdown_option_myaccount: //nav/button[text()='My Account']
   dropdown_option_help: //nav//button[text()='Help']
   dropdown_option_logout: //nav/button[text()='Log Out']
-  alert_updated_notification: //div[@class='Toastify']//div[contains(text(),'Notification preferences updated')]
-  alert_updated_info: //div[@class='Toastify']//div[contains(text(),'Account info updated')]
+  alert_updated_notification: //section[@class='Toastify']//div[contains(text(),'Notification preferences updated')]
+  alert_updated_info: //section[@class='Toastify']//div[contains(text(),'Account info updated')]
   alert_failed_update_password: //div[@role='alert']//div[contains(text(),'Failed to update password')]
-  alert_success_update_password: //div[@class='Toastify']//div[contains(text(),'Password updated successfully')]
+  alert_success_update_password: //section[@class='Toastify']//div[contains(text(),'Password updated successfully')]
   call_now_button: //button[text()='Call Now']
   alert_call_ended: //div[@role='alert']//div[contains(text(),'Call has ended')]
   calendar_right_button: //span[@class='icon-chevron-right']
@@ -61,7 +61,7 @@ employee_health_home_page:
   calendar_day_without_event1: //*[@class='calendar ml']//button[@class ='calendar-day'][1]
   calendar_day_without_event2: //*[@class='calendar ml']//button[@class ='calendar-day'][2]
   calendar_day_without_event3: //*[@class='calendar ml']//button[@class ='calendar-day'][3]
-  appointment_scheduled_notification: //div[@class='Toastify']//div[contains(text(),'Appointment scheduled')]
+  appointment_scheduled_notification: //section[@class='Toastify']//div[contains(text(),'Appointment scheduled')]
   close_coming_appointment_dialog_button: //*[@id='dialogs']//button[contains(.,'Close')]
 
 employee_health_call_history_tab:
@@ -80,7 +80,7 @@ employee_health_my_account_modal:
   notifications_tab: //*[@id='modals']//nav/button[text()='Notifications']
   my_info_tab: //*[@id='modals']//nav/button[text()='My Info']
   update_password_tab: //nav/button[text()='Update Password']
-  notifications_text: //div[@tab-title='Notifications']/form/p[contains(text(),'minutes')]
+  notifications_text: //div[@id='modals']//p[@class='text-sm']
   save_changes_button: //button[text()='Save Changes']
   cancel_button: //button[text()='Cancel']
   notifications_email_checkbox_input: //*[@id='minBeforeAppointmentToEmail']
@@ -95,21 +95,21 @@ employee_health_my_account_modal:
   my_info_lastname_input: //div[contains(@class,'input-group')][contains(.,'Last Name')]/input
   my_info_email_input: //div[contains(@class,'input-group')][contains(.,'Email')]/input
   my_info_date_of_birth_input: //div[contains(@class,'input-group')][contains(.,'Date of Birth')]/input
-  my_info_member_id_input: //div[contains(@class,'input-group')][contains(.,'Member ID')]/input
+  my_info_member_id_input: //div[(@class,'input-group')][contains(.,'Member ID')]/input
   update_email_tab: //nav/button[text()='Update Email']
-  update_email_current: //*[@tab-title='Update Email']//input[contains(@class,'input')]
+  update_email_current: //form[contains(@class,'settings-form')]/div[1]/input[contains(@class,'input')]
   update_email_new: //*[@id='email']
-  update_email_requirements_text: //*[@tab-title='Update Email']//div[contains(@class,'login-screen-password-help')]
+  update_email_requirements_text: //form[contains(@class,'settings-form')]/div[3]/p
   update_email_send_confirmation: //button[text()='Send Confirmation']
-  update_email_cancel_button: //*[@tab-title='Update Email']//button[text()='Cancel']
+  update_email_cancel_button: //*[@data-tab-title='Update Email']//button[text()='Cancel']
   update_password_current: //*[@id='currentPassword']
   update_password_new: //*[@id='password']
   update_password_confirm: //*[@id='passwordConfirmation']
   update_password_change_my_password_button: //button[@type='submit']
-  update_password_cancel_button: //*[@tab-title='Update Password']//button[text()='Cancel']
+  update_password_cancel_button: //*[@data-tab-title='Update Password']//button[text()='Cancel']
   update_password_requirements_link: //span[text()='see requirements']
   update_password_requirements_text: //*[@id='passwordRequirements']
-  update_password_requirements_text_section: //*[@tab-title='Update Password']//div[contains(@class,'login-screen-password-help')]
+  update_password_requirements_text_section: //*[@data-tab-title='Update Password']//div[contains(@class,'login-screen-password-help')]
 
 employee_health_telehealth_on_demand_modal:
   modal_title: //*[@id='modals']//h4[text()='Telehealth On Demand Form']
